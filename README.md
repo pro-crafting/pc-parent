@@ -1,4 +1,7 @@
 # pc-parent
+[![Build Status](https://travis-ci.org/Postremus/pc-parent.png)](https://travis-ci.org/Postremus/pc-parent)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.pro-crafting/pc-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.pro-crafting/pc-parent)
+
 Parent pom for pro-crafting projects.
 
 ## Usage
