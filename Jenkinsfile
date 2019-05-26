@@ -13,12 +13,12 @@ pipeline {
             }
         }
         stage ('Deploy') {
-            steps {
-                when {
-                    not {
-                        changeRequest()
-                    }
+            when {
+                not {
+                    changeRequest()
                 }
+            }
+            steps {
                 withCredentials([
                     usernamePassword(credentialsId: 'ossrh', usernameVariable: 'OSSRH_USERNAME', passwordVariable: 'OSSRH_TOKEN'),
                     usernamePassword(credentialsId: 'gpg', usernameVariable: 'GPG_KEY_NAME', passwordVariable: 'GPG_PASSPHRASE'),
