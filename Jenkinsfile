@@ -20,8 +20,8 @@ pipeline {
                 script {
                   currentBuild.result = 'NOT_BUILT'
                }
+               error('Skipping release build')
             }
-            error('Skipping release build')
         }
         stage ('Build') {
             steps {
