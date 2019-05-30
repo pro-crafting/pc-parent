@@ -7,6 +7,23 @@ pipeline {
         jdk 'openjdk8-zulu'
     }
     stages {
+        stage ('Checking commit message') {
+            when {
+                allOf {
+                    not {
+                        buildingTag()
+                    }
+                    changelog '.*\\[maven-release-plugin\\].*'
+                }
+            }
+
+            steps {
+                script {
+                  currentBuild.result = 'NOT_BUILT'
+               }
+               error('Skipping release build')
+            }
+        }
         stage ('Build') {
             steps {
                 sh 'mvn install'
@@ -14,21 +31,8 @@ pipeline {
         }
         stage ('Deploy') {
             when {
-                anyOf {
-                    not {
-                        anyOf {
-                            changeRequest()
-                            buildingTag()
-                            changelog '.*\\[maven-release-plugin\\].*'
-                        }
-                    }
-                    allOf {
-                        not {
-                            changeRequest()
-                        }
-                        buildingTag()
-                        changelog '.*\\[maven-release-plugin\\].*'
-                    }
+                not {
+                    changeRequest()
                 }
             }
 
@@ -39,9 +43,14 @@ pipeline {
                     file(credentialsId: 'mavensigningkey', variable: 'MAVEN_SIGNING_KEY')
                 ]) {
                     sh "gpg --batch --fast-import ${env.MAVEN_SIGNING_KEY}"
-                    sh 'mvn clean deploy -s cd/settings.xml -P sign'
+                    sh 'mvn deploy -s cd/settings.xml -P sign'
                 }
             }
+        }
+    }
+    post {
+        always {
+            cleanWs()
         }
     }
 }
