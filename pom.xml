@@ -41,6 +41,7 @@
         <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
         <version.maven-javadoc-plugin>3.0.0</version.maven-javadoc-plugin>
         <version.nexus-staging-maven-plugin>1.6.8</version.nexus-staging-maven-plugin>
+        <version.build-helper-maven-plugin>3.0.0</version.build-helper-maven-plugin>
     </properties>
 
     <build>
@@ -107,6 +108,11 @@
                         <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                         <autoReleaseAfterClose>true</autoReleaseAfterClose>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>${version.build-helper-maven-plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
