@@ -14,8 +14,21 @@ pipeline {
         }
         stage ('Deploy') {
             when {
-                not {
-                    changeRequest()
+                anyOf {
+                    not {
+                        anyOf {
+                            changeRequest()
+                            buildingTag()
+                            changelog '.*\\[maven-release-plugin\\].*'
+                        }
+                    }
+                    allOf {
+                        not {
+                            changeRequest()
+                        }
+                        buildingTag()
+                        changelog '.*\\[maven-release-plugin\\].*'
+                    }
                 }
             }
             steps {
