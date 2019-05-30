@@ -16,6 +16,7 @@ pipeline {
                     changelog '.*\\[maven-release-plugin\\].*'
                 }
             }
+
             steps {
                 script {
                   currentBuild.result = 'NOT_BUILT'
