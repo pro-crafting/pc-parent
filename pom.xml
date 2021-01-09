@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.pro-crafting</groupId>
     <artifactId>pc-parent</artifactId>
-    <version>10</version>
+    <version>11-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>pro-crafting parent pom</name>
     <description>
@@ -21,7 +21,7 @@
         <connection>scm:git:git@github.com:Postremus/pc-parent.git</connection>
         <url>scm:git:git@github.com:Postremus/pc-parent.git</url>
         <developerConnection>scm:git:git@github.com:Postremus/pc-parent.git</developerConnection>
-        <tag>pc-parent-10</tag>
+        <tag>pc-parent-1</tag>
     </scm>
 
     <developers>
