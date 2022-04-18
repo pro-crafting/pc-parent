@@ -35,8 +35,7 @@
 
 
     <properties>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.release>17</maven.compiler.release>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.organization>pro-crafting</sonar.organization>
@@ -48,17 +47,17 @@
 
         <!-- Plugin version -->
         <version.maven-jar-plugin>3.2.2</version.maven-jar-plugin>
-        <version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
-        <version.maven-release-plugin>3.0.0-M1</version.maven-release-plugin>
+        <version.maven-compiler-plugin>3.10.1</version.maven-compiler-plugin>
+        <version.maven-release-plugin>3.0.0-M5</version.maven-release-plugin>
         <version.maven-gpg-plugin>3.0.1</version.maven-gpg-plugin>
-        <version.maven-source-plugin>3.2.0</version.maven-source-plugin>
-        <version.maven-javadoc-plugin>3.2.0</version.maven-javadoc-plugin>
+        <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
+        <version.maven-javadoc-plugin>3.3.2</version.maven-javadoc-plugin>
         <version.nexus-staging-maven-plugin>1.6.12</version.nexus-staging-maven-plugin>
-        <version.build-helper-maven-plugin>3.0.0</version.build-helper-maven-plugin>
+        <version.build-helper-maven-plugin>3.3.0</version.build-helper-maven-plugin>
         <version.maven-shade-plugin>3.3.0</version.maven-shade-plugin>
-        <version.sonar-maven-plugin>3.4.1.1168</version.sonar-maven-plugin>
+        <version.sonar-maven-plugin>3.9.1.2184</version.sonar-maven-plugin>
         <version.maven-surefire-plugin>3.0.0-M6</version.maven-surefire-plugin>
-        <version.docker-maven-plugin>0.34.1</version.docker-maven-plugin>
+        <version.docker-maven-plugin>0.39.1</version.docker-maven-plugin>
     </properties>
 
     <build>
@@ -161,6 +160,11 @@
                     <groupId>io.fabric8</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>${version.docker-maven-plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>${org.sonarsource.scanner.maven}</groupId>
+                    <artifactId>${sonar-maven-plugin}</artifactId>
+                    <version>${version.sonar-maven-plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
