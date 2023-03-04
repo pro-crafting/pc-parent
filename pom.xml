@@ -29,6 +29,7 @@
         <developer>
             <id>Postremus</id>
             <name>Martin Panzer</name>
+            <email>postremus1996@googlemail.com</email>
             <timezone>+2</timezone>
         </developer>
     </developers>
@@ -46,15 +47,15 @@
         <version.mockito>5.1.1</version.mockito>
 
         <!-- Plugin version -->
-        <version.maven-jar-plugin>3.2.2</version.maven-jar-plugin>
-        <version.maven-compiler-plugin>3.10.1</version.maven-compiler-plugin>
+        <version.maven-jar-plugin>3.3.0</version.maven-jar-plugin>
+        <version.maven-compiler-plugin>3.11.0</version.maven-compiler-plugin>
         <version.maven-release-plugin>3.0.0-M7</version.maven-release-plugin>
         <version.maven-gpg-plugin>3.0.1</version.maven-gpg-plugin>
         <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
-        <version.maven-javadoc-plugin>3.4.0</version.maven-javadoc-plugin>
+        <version.maven-javadoc-plugin>3.5.0</version.maven-javadoc-plugin>
         <version.nexus-staging-maven-plugin>1.6.13</version.nexus-staging-maven-plugin>
         <version.build-helper-maven-plugin>3.3.0</version.build-helper-maven-plugin>
-        <version.maven-shade-plugin>3.3.0</version.maven-shade-plugin>
+        <version.maven-shade-plugin>3.4.1</version.maven-shade-plugin>
         <version.sonar-maven-plugin>3.9.1.2184</version.sonar-maven-plugin>
         <version.maven-surefire-plugin>3.0.0-M9</version.maven-surefire-plugin>
         <version.docker-maven-plugin>0.42.0</version.docker-maven-plugin>
