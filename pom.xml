@@ -44,7 +44,7 @@
 
         <!-- Dependency Versions -->
         <version.junit-jupiter>5.10.1</version.junit-jupiter>
-        <version.mockito>5.5.0</version.mockito>
+        <version.mockito>5.8.0</version.mockito>
 
         <!-- Plugin version -->
         <version.maven-jar-plugin>3.3.0</version.maven-jar-plugin>
