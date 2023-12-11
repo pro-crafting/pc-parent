@@ -58,7 +58,7 @@
         <version.maven-shade-plugin>3.5.1</version.maven-shade-plugin>
         <version.sonar-maven-plugin>3.9.1.2184</version.sonar-maven-plugin>
         <version.maven-surefire-plugin>3.2.2</version.maven-surefire-plugin>
-        <version.docker-maven-plugin>0.43.0</version.docker-maven-plugin>
+        <version.docker-maven-plugin>0.43.4</version.docker-maven-plugin>
     </properties>
 
     <build>
