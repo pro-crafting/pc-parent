@@ -55,7 +55,7 @@
         <version.maven-javadoc-plugin>3.6.3</version.maven-javadoc-plugin>
         <version.nexus-staging-maven-plugin>1.6.13</version.nexus-staging-maven-plugin>
         <version.build-helper-maven-plugin>3.5.0</version.build-helper-maven-plugin>
-        <version.maven-shade-plugin>3.5.1</version.maven-shade-plugin>
+        <version.maven-shade-plugin>3.5.2</version.maven-shade-plugin>
         <version.sonar-maven-plugin>3.9.1.2184</version.sonar-maven-plugin>
         <version.maven-surefire-plugin>3.2.5</version.maven-surefire-plugin>
         <version.maven-failsafe-plugin>3.2.5</version.maven-failsafe-plugin>
