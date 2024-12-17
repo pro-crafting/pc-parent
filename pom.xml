@@ -43,7 +43,7 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
         <!-- Dependency Versions -->
-        <version.junit-jupiter>5.11.3</version.junit-jupiter>
+        <version.junit-jupiter>5.11.4</version.junit-jupiter>
         <version.mockito>5.14.2</version.mockito>
 
         <!-- Plugin version -->
